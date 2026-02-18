@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Fun Learning Games Hub - Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .dev-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .container {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dev-banner">
+        🔧 DEVELOPMENT MODE - Games running on separate servers
+    </div>
+
+    <div class="background-elements">
+        <div class="floating-emoji emoji-1">🍎</div>
+        <div class="floating-emoji emoji-2">🚗</div>
+        <div class="floating-emoji emoji-3">🍊</div>
+        <div class="floating-emoji emoji-4">🚙</div>
+        <div class="floating-emoji emoji-5">🍇</div>
+        <div class="floating-emoji emoji-6">🏎️</div>
+    </div>
+
+    <div class="container">
+        <header class="hero-section">
+            <h1 class="main-title">
+                <span class="title-icon">🎮</span>
+                Fun Learning Games
+                <span class="title-icon">✨</span>
+            </h1>
+            <p class="subtitle">Choose your adventure and start learning!</p>
+        </header>
+
+        <div class="games-grid">
+            <!-- Fruit Game Card -->
+            <div class="game-card fruit-card">
+                <div class="card-glow fruit-glow"></div>
+                <div class="card-content">
+                    <div class="game-icon-container">
+                        <div class="game-icon">🍎</div>
+                        <div class="game-icon-group">
+                            <span>🍓</span>
+                            <span>🍊</span>
+                            <span>🍇</span>
+                        </div>
+                    </div>
+                    <h2 class="game-title">Fruit Garden</h2>
+                    <p class="game-description">
+                        Explore the colorful world of fruits! Learn about different fruits, 
+                        play matching games, and test your knowledge with fun quizzes.
+                    </p>
+                    <div class="game-features">
+                        <span class="feature-tag">🌈 Interactive Gallery</span>
+                        <span class="feature-tag">🎮 Matching Game</span>
+                        <span class="feature-tag">🏆 Fruit Quiz</span>
+                    </div>
+                    <a href="http://localhost:5173" target="_blank" class="game-button fruit-button">
+                        <span>🍎 Enter Fruit Garden</span>
+                        <span class="button-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Math Game Card -->
+            <div class="game-card car-card">
+                <div class="card-glow car-glow"></div>
+                <div class="card-content">
+                    <div class="game-icon-container">
+                        <div class="game-icon">🚗</div>
+                        <div class="game-icon-group">
+                            <span>🔧</span>
+                            <span>🏎️</span>
+                            <span>🚙</span>
+                        </div>
+                    </div>
+                    <h2 class="game-title">Smart Garage</h2>
+                    <p class="game-description">
+                        Build your dream car by solving math problems! Answer questions correctly 
+                        to collect car parts and complete amazing vehicles.
+                    </p>
+                    <div class="game-features">
+                        <span class="feature-tag">🔢 Math Practice</span>
+                        <span class="feature-tag">🚗 Car Building</span>
+                        <span class="feature-tag">⭐ Progress Tracking</span>
+                    </div>
+                    <a href="http://localhost:3001" target="_blank" class="game-button car-button">
+                        <span>🚗 Enter Smart Garage</span>
+                        <span class="button-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer-section">
+            <div class="footer-content">
+                <p class="footer-text">🌟 Learning made fun through interactive games! 🌟</p>
+                <p class="footer-subtext">Choose any game above to start your learning adventure</p>
+                <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;">
+                    Dev Servers: Fruit Garden (http://localhost:5173) | Smart Garage (http://localhost:3001)
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth entrance animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.game-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+
+        // Add particle effects on card hover
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Check if dev servers are running
+        setTimeout(() => {
+            fetch('http://localhost:5173')
+                .then(() => console.log('✅ Fruit Garden is running'))
+                .catch(() => console.warn('⚠️ Fruit Garden might not be running'));
+            
+            fetch('http://localhost:3001')
+                .then(() => console.log('✅ Smart Garage is running'))
+                .catch(() => console.warn('⚠️ Smart Garage might not be running'));
+        }, 2000);
+    </script>
+</body>
+</html>

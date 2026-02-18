@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "buildCommand": "cd CB.SC.U4CSE23424 && npm run build",
+  "outputDirectory": "CB.SC.U4CSE23424/dist",
+  "installCommand": "cd CB.SC.U4CSE23424 && npm install",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

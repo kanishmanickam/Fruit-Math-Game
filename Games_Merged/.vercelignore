@@ -1,0 +1,8 @@
+# Ignore source files, only deploy dist
+CB.SC.U4CSE23424/src
+CB.SC.U4CSE23424/node_modules
+Math_Game_FSlab2/src
+Math_Game_FSlab2/node_modules
+node_modules
+*.md
+!dist/**

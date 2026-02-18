@@ -1,0 +1,19 @@
+{
+  "name": "fun-learning-games-hub",
+  "version": "1.0.0",
+  "description": "Unified hub for Fruit Garden and Smart Garage learning games - Single port application",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cd CB.SC.U4CSE23424 && npm run dev",
+    "build": "cd CB.SC.U4CSE23424 && npm run build",
+    "preview": "cd CB.SC.U4CSE23424 && npm run preview",
+    "install:all": "npm install && cd CB.SC.U4CSE23424 && npm install && cd ..",
+    "vercel-build": "cd CB.SC.U4CSE23424 && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "http-server": "^14.1.1",
+    "fs-extra": "^11.2.0"
+  }
+}
