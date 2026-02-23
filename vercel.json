@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "cd Games_Merged/CB.SC.U4CSE23424 && npm install && npm run build",
+  "outputDirectory": "Games_Merged/CB.SC.U4CSE23424/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
